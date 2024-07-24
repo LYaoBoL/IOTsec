@@ -1,0 +1,387 @@
+***Firmware Directory***
+/home/iot/Desktop/_DIR825B1_FW210NAb02.bin.extracted/squashfs-root
+***Search for password files***
+##################################### passwd
+t/etc/passwd
+
+##################################### shadow
+t/etc/shadow
+
+##################################### *.psk
+
+***Search for Unix-MD5 hashes***
+
+
+***Search for SSL related files***
+##################################### *.crt
+
+##################################### *.pem
+t/www/caKey.pem
+t/www/caCert.pem
+Incorrect File Content:Continuing
+Shodan cli not found.
+Shodan cli not found.
+
+##################################### *.cer
+
+##################################### *.p7b
+
+##################################### *.p12
+
+##################################### *.key
+
+
+***Search for SSH related files***
+##################################### authorized_keys
+
+##################################### *authorized_keys*
+
+##################################### host_key
+
+##################################### *host_key*
+
+##################################### id_rsa
+
+##################################### *id_rsa*
+
+##################################### id_dsa
+
+##################################### *id_dsa*
+
+##################################### *.pub
+
+
+***Search for files***
+##################################### *.conf
+t/etc/resolv.conf
+t/etc/syslog.conf
+t/etc/host.conf
+t/etc/udhcpd.conf
+t/etc/nsswitch.conf
+t/etc/wpa.conf
+t/etc/ath/wpapsk.conf
+t/etc/ath/wpaEAP.conf
+t/etc/ath/wpa-psk.conf
+t/etc/ath/WEP_ori.conf
+t/etc/ath/hostapd.conf
+t/etc/ath/wpa2-psk.conf
+t/etc/ath/template.conf
+t/etc/ath/WEP.conf
+t/etc/ath/8021x.conf
+t/etc/ath/default/wpapsk.conf
+t/etc/ath/default/wpaEAP.conf
+t/etc/ath/default/wpa-psk.conf
+t/etc/ath/default/default_hostapd.conf
+t/etc/ath/default/wpa2-psk.conf
+t/etc/ath/default/WEP.conf
+t/etc/ath/default/8021x.conf
+t/etc/ath/default/wpa2EAP.conf
+t/etc/ath/WEP_disable.conf
+t/etc/ath/wpa2EAP.conf
+
+##################################### *.cfg
+
+##################################### *.ini
+
+
+***Search for database related files***
+##################################### *.db
+
+##################################### *.sqlite
+
+##################################### *.sqlite3
+
+
+***Search for shell scripts***
+##################################### shell scripts
+t/etc/ath/iwpriv_test.sh
+
+***Search for other .bin files***
+##################################### bin files
+
+***Search for patterns in files***
+-------------------- upgrade --------------------
+t/bin/nvram
+t/www/lang_en.js
+t/sbin/tftpd
+t/sbin/rc
+t/sbin/httpd
+t/lib/libnvram.so
+
+-------------------- admin --------------------
+t/etc/services
+t/etc/passwd
+t/etc/shadow
+t/etc/nvram.default
+t/www/support_tools.asp
+t/www/lang_en.js
+t/www/user_page.asp
+t/www/tools_admin.asp
+t/www/support_men.asp
+t/www/st_routing.asp
+t/www/login.asp
+t/sbin/httpd
+t/lib/iptables/libipt_REJECT.so
+
+-------------------- root --------------------
+t/bin/busybox
+t/bin/wt
+t/bin/cli
+t/etc/passwd
+t/etc/group
+t/etc/shadow
+t/etc/ath/apup
+t/etc/ath/ath_makeVAP
+t/etc/ath/ath_apcfg
+t/etc/ath/ath_apup
+t/etc/ath/default/apup
+t/etc/ath/default/apcfg
+t/etc/ath/default/makeVAP
+t/etc/ath/makeVAP
+t/etc/ath/cameo_apup
+t/www/igd.xml
+t/sbin/miniupnpd
+t/sbin/iptables-restore
+t/sbin/tc
+t/sbin/pppd
+t/sbin/pppoe-relay
+t/sbin/iptables-save
+t/sbin/ip6tables-restore
+t/sbin/ip6tables
+t/sbin/dnsmasq
+t/sbin/rc
+t/sbin/igmpproxy
+t/sbin/ip6tables-save
+t/sbin/dhcp6c
+t/sbin/radvd
+t/sbin/hostapd
+t/sbin/ip
+t/sbin/avahi-daemon
+t/sbin/iptables
+t/lib/pppd/2.4.3/rp-pppoe.so
+t/lib/modules/2.6.15--LSDK-7.2.0.156/kernel/drivers/usb/core/usbcore.ko
+t/lib/libcrypto.so.0.9.8
+t/lib/libavahi-core.so.7.0.2
+t/lib/libavahi-core.a
+
+-------------------- password --------------------
+t/etc/wpa2/hostapd.eap_user
+t/etc/wpa.conf
+t/etc/ath/hostapd.eap_user
+t/www/wizard_wan4d.asp
+t/www/tools_ddns.asp
+t/www/wizard_ipv6_pppoe.asp
+t/www/isplist.js
+t/www/lang_en.js
+t/www/wizard_wan4e.asp
+t/www/tools_admin.asp
+t/www/tools_email.asp
+t/www/wan_poe.asp
+t/www/wireless.asp
+t/www/jquery-1.4.2.min.js
+t/www/GetWanSettings.xml
+t/www/guest_zone.asp
+t/www/error-404.htm
+t/www/wizard_wan4f.asp
+t/www/wizard_wan1.asp
+t/www/login.asp
+t/www/wan_l2tp.asp
+t/www/public.js
+t/www/wan_pptp.asp
+t/www/adv_ipv6_pppoe.asp
+t/www/wizard_wan4c.asp
+t/sbin/noip2
+t/sbin/msmtp
+t/sbin/pppd
+t/sbin/dcc
+t/sbin/rc
+t/sbin/hostapd
+t/sbin/httpd
+t/lib/libuClibc-0.9.28.so
+t/lib/libcrypto.so.0.9.8
+
+-------------------- passwd --------------------
+t/bin/busybox
+t/etc/services
+t/etc/nsswitch.conf
+t/sbin/msmtp
+t/sbin/pppd
+t/sbin/mailosd
+t/sbin/httpd
+t/lib/libuClibc-0.9.28.so
+t/lib/libproject.so
+
+-------------------- pwd --------------------
+t/bin/busybox
+t/www/login.asp
+t/sbin/hostapd
+t/lib/libuClibc-0.9.28.so
+
+-------------------- dropbear --------------------
+
+-------------------- ssl --------------------
+t/www/lang_en.js
+t/sbin/crowdcontrol
+t/sbin/hostapd
+t/sbin/httpd
+t/lib/libssl.so.0.9.8
+t/lib/libcrypto.so.0.9.8
+
+-------------------- private key --------------------
+t/www/caKey.pem
+t/sbin/msmtp
+t/sbin/httpd
+t/lib/libssl.so.0.9.8
+t/lib/libwpa_common.so
+t/lib/libcrypto.so.0.9.8
+t/lib/libwpa_common.a
+
+-------------------- telnet --------------------
+t/etc/services
+t/www/lang_en.js
+t/www/public_msg.js
+t/lib/libcrypto.so.0.9.8
+t/share/avahi/service-types
+
+-------------------- secret --------------------
+t/etc/ath/hostapd.eap_user
+t/www/lang_en.js
+t/www/public.js
+t/sbin/pppd
+t/sbin/l2tpd
+t/sbin/dhcp6s
+t/sbin/dhcp6c
+t/sbin/hostapd
+t/sbin/httpd
+t/lib/libssl.so.0.9.8
+t/lib/libwpa_common.so
+t/lib/l2tp/plugins/sync-pppd.so
+t/lib/l2tp/plugins/cmd.so
+t/lib/libwpa_common.a
+
+-------------------- pgp --------------------
+t/lib/libwpa_common.so
+t/share/avahi/service-types
+
+-------------------- gpg --------------------
+
+-------------------- token --------------------
+t/bin/busybox
+t/include/expat.h
+t/sbin/noip2
+t/sbin/iwlist
+t/sbin/tc
+t/sbin/pppd
+t/sbin/igmpproxy
+t/sbin/radvd
+t/sbin/hostapd
+t/lib/libexpat.a
+t/lib/libcrypto.so.0.9.8
+t/lib/libexpat.so.1.5.2
+
+-------------------- api key --------------------
+
+-------------------- oauth --------------------
+
+
+***Search for web servers***
+##################################### search for web servers
+##################################### apache
+
+##################################### lighttpd
+
+##################################### alphapd
+
+##################################### httpd
+t/sbin/httpd
+
+
+***Search for important binaries***
+##################################### important binaries
+##################################### ssh
+
+##################################### sshd
+
+##################################### scp
+
+##################################### sftp
+
+##################################### tftp
+
+##################################### dropbear
+
+##################################### busybox
+t/bin/busybox
+
+##################################### telnet
+
+##################################### telnetd
+
+##################################### openssl
+
+
+***Search for ip addresses***
+##################################### ip addresses
+0.0.0.0
+127.0.0.1
+192.168.0.1
+192.168.0.10
+192.168.0.100
+192.168.0.101
+192.168.0.13
+192.168.0.199
+192.168.0.2
+192.168.0.20
+192.168.0.200
+192.168.0.22
+192.168.0.254
+192.168.0.255
+192.168.0.3
+192.168.0.4
+192.168.0.44
+192.168.0.5
+192.168.0.50
+192.168.0.54
+192.168.0.99
+192.168.1.2
+192.168.1.20
+192.168.1.254
+192.168.2.1
+192.88.99.1
+204.194.232.200
+204.194.234.200
+255.255.255.0
+255.255.255.255
+
+***Search for urls***
+##################################### urls
+http://<
+http:// and 
+http://<% CmoGetCfg(
+http://<% CmoGetCfg('lan_ipaddr',''); %>
+http://<!-- insert name=upnp_addr -->:5678<
+http://<!-- insert name=upnp_addr -->:80<
+http://jquery.com
+http://jquery.org
+http://my.domain.com:1080
+http://pajhome.org.uk
+http://purenetworks.com
+https://...<
+http://schemas.xmlsoap.org
+http://sizzlejs.com
+http://support.dlink.com
+http://support.dlink.com<
+http://support.dlink.com.tw
+http://www.dlink.com
+http://www.dlink.com<
+http://www.dns-sd.org
+http://www.dslreports.com'>www.dslreports.com<
+http://www.gnu.org
+http://www.iana.org
+http://www.mydomain.info<
+http://www.w3.org
+
+***Search for emails***
+##################################### emails
+pax.user@example.com
+psk.user@example.com
