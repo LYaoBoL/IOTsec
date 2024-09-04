@@ -34,7 +34,9 @@ Epson 打印机使用的命令语言，主要用于点阵打印机。
 # 漏洞研究过程
 公司有一台EPSON L4158打印机，其有WiFi功能可以连接到与我主机同一网段下
 我们可以查看到自己的ip是在2段上，但又不知道打印机设备的ip是什么
+
 ![](image/f6b08a195915bf9bec63a848ebfe2f16.png)
+
 使用nmap扫描整个 192.168.2.0 网段
 ```sh
 sudo nmap -sS -sV -O 192.168.2.0/24
@@ -42,42 +44,63 @@ sudo nmap -sS -sV -O 192.168.2.0/24
 -sS：使用 TCP SYN 扫描，快速且隐蔽。
 -sV：检测服务版本，获取更多关于开放端口的信息。
 -O： 操作系统检测，尝试识别目标主机的操作系统。
+
 ![](image/cc3a5b110ca58af91264f0584350cd8e.png)
+
 515端口 用于传统的 LPD 打印服务，适合需要排队管理的打印任务
 9100端口 用于快速、直接的打印服务，广泛支持现代打印机
 使用到的工具就是利用9100端口来进行渗透
 # PRET
 由于EPSON L4158型号是不支持这三种语言的，所以我们用工具渗透的时候只会把源码给打印出来
 执行打印命令后，打印成功则会回显H
+
 ![](image/d46b4a3bb0218c16af91cfd8cf48ad54.png)
+
 ![](image/e1d6e0309a4ddf2cf34b9c5a3bbc1ff1.jpg)
+
 在zoomeye中搜索`port:9100 pjl`获取到一个ip
 在github上搜索到PRET工具，git下来，进入到这个目录
+
 ![](image/1e9d433dc6d8d35b4a7dec80a7ed62e4.png)
+
 ```sh
 python pret --safe ip ps/pjl/pcl
 ```
 --safe 在连接前尝试通过 IPP、HTTP 和 SNMP 检查设备是否实际支持所选的打印语言 （PS/PJL/PCL），若成功语言支持则直接就连接成功了
+
 ![](image/c67f570f9bc6f9018c4446cf7221c22f.png)
+
 可以看到设备为K3250
 help或？可以查看在ps/pjl/pcl中可以执行的命令
+
 ![](image/8b664a6f074183a19419f333d326c8d2.png)
+
 查看其基础信息
 ```sh
 info status
 info memory
 version
 ```
+
 ![](image/2a2ca9236e86e9a5e6feb56ded4a35a6.png)
+
 # 漏洞利用
 利用print命令可以打印我们本地写的一个井字棋的ps脚本，让其打印机识别且执行打印出来一个井字棋盘，返回H则证明我们执行成功了
+
 ![](image/d46b4a3bb0218c16af91cfd8cf48ad54.png)
+
 利用traversal命令可以实现目录穿越，经过验证../../不能够实现但是../.../就可以实现目录穿越了
+
 ![](image/532e78a43febac35091d3ff0face7103.png)
+
 ![](image/cadc20d544aba29d20e131ddfda7fc42.png)
+
 ls查看到我们要穿越的目录，就可以再结合get命令，达到下载到我们本机中
+
 ![](image/4fcd45cc51ca344b977f75e4bb9d54b3.png)
+
 ![](image/5a4ae1671c200e3a0bcd81e346c649ba.png)
+
 在实际渗透中，如果打印机设置了保存其打印过的作业在打印机中，那么我们就可以通过PRET这个工具，结合命令操作，目录穿越到想要下载内容的目录中，获取到我们想要的文件内容信息
 # 三种语言模式下的命令
 PS 模式下的命令
